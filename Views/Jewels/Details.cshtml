@@ -1,0 +1,362 @@
+﻿<!DOCTYPE html>
+<html lang="ro">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Latisor</title>
+	<style>
+*{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: 'Poppins', sans-serif;
+	font-size: 16px;
+	color: #333;
+	background-color: #f7f7f7;
+	line-height: 1.5;
+}
+
+.navbar {
+        display: flex; 
+        justify-content: space-between;       
+        align-items: center;          
+        background-color: #FFC0CB;   
+        color: #fff;                
+        padding: 10px; 
+        height: 90px;           
+}
+
+.search-button {
+  background-color: #FFC0CB;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.search-button:hover {
+  background-color: grey;
+}
+
+.search-button svg {
+  fill: currentColor;
+  vertical-align: middle;
+}
+
+input[type="text"] {
+  flex: 1;
+  padding: 8px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+button[type="submit"] {
+  background-color: #FFC0CB;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  margin-left: 8px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+
+a {
+        display: inline-block;
+        padding: 10px 15px;
+        color: #808080;
+        text-decoration: none;
+        font-size: 18px;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+li {
+        display: inline-block;
+        margin: 0 10px;
+}
+
+.logo img {
+        border-radius: 70%;
+}
+
+.logo p {
+        font-family: 'Helvetica Neue', sans-serif;
+        font-size: 18px;
+        letter-spacing: 1px;
+        text-align: center;
+        color:#CBA135;
+}
+
+h1 {
+	margin: 0;
+}
+
+main {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin: 20px;
+        padding-top: 50px;
+        padding-bottom: 70px;
+}
+
+.card {
+	width: 400px;
+	margin-bottom: 20px;
+        margin-left: 400px;
+	border: 1px solid #ccc;
+	box-shadow: 0 0 10px rgba(0,0,0,0.2);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+}
+
+.card img {
+       object-fit: cover;
+       object-position: center;
+       width: 100%;
+       height: 100%;
+       border-radius: 10px;
+       box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+       transition: all 0.3s ease-in-out;
+}
+
+.card h2 {
+	margin: 10px;
+	font-size: 1.2em;
+}
+
+.card p {
+	margin: 10px;
+	font-size: 0.8em;
+	color: #666;
+}
+
+.reviews {
+	margin: 20px;
+}
+
+.review {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #f8f8f8;
+}
+
+.review h3 {
+	margin: 0;
+	font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.review p {
+	font-size: 16px;
+  line-height: 1.5;
+  color: #555;
+}
+
+.review:hover {
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
+  transition: all 0.3s ease;
+}
+
+.review h3:before {
+	content: "★★★★★ ";
+	color: gold;
+}
+
+.description {
+   margin: 50px auto;
+  max-width: 600px;
+  text-align: justify;
+  padding: 30px;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  background-color: #f7f7f7;
+}
+
+.description h2 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.description ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.description li {
+  font-size: 18px;
+  font-weight: 500;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.description li:before {
+  content: "•";
+  color: #666;
+  margin-right: 10px;
+}
+  .description {
+    margin: 20px;
+    padding: 20px;
+  }
+  
+  .description h4 {
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+  
+  .description li {
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+}
+  .description {
+    margin: 20px;
+    padding: 20px;
+  }
+  
+  .description h4 {
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+  
+  .description li {
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+}
+
+.buy-btn {
+  display: block;
+  padding: 12px 20px;
+  margin-top: auto;
+  margin-bottom: 20px;;
+  border-radius: 30px;
+  font-size: 16px;
+  background-color: grey;
+  color: #F6DDCC;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+}
+
+.buy-btn:hover {
+outline: none;
+  background-color:  #F6DDCC;
+  color: grey;
+}
+
+
+footer {
+        background-color: #333;
+        color:#808080; ;
+        padding: 20px;
+}
+
+footer a {
+        color: #FFC0CB;
+}
+
+.footer container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+}
+	</style>
+</head>
+<body>
+	<div class="navbar">
+		<div class="logo">
+			<a href=https://localhost:7284/Home/Index><img src=https://i.pinimg.com/564x/24/c5/19/24c51940009a89449a3f0d0df6c96554.jpg alt="SparkleJewelers logo" width="150" height="150"></a>
+			<p>SparkleJewelers</p>
+		</div>
+		<div class="links">
+			<a href=https://localhost:7284/Jewels>Bijuterii</a>
+			<a href=https://localhost:7284/Brands>Branduri</a>
+			<li>
+				<form>
+					<input type="text" placeholder="Căutare...">
+					<button type="submit" class="search-button">
+						<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+							<path d="M9.5 18a8.5 8.5 0 1 1 5.989-2.493l5.527 5.525a1.5 1.5 0 0 1-2.122 2.122l-5.525-5.527A8.45 8.45 0 0 1 9.5 18zm0-14a5.5 5.5 0 1 0 5.5 5.5A5.507 5.507 0 0 0 9.5 4z" />
+						</svg>
+					</button>
+				</form>
+
+			</li>
+			<a href="Profile.html">Profil</a>
+			<a href=https://localhost:7284/Carts>Cosul meu</a>
+		</div>
+	</div>
+	<</body>
+
+	<body>
+		<main>
+			<div class="card">
+				<img src="https://i.pinimg.com/236x/48/38/bb/4838bbe4339731240c07679b3ae7d67f.jpg" alt="Bijuterie">
+				<h2>Lantisor</h2>
+				<p>Preț: 500 lei</p>
+			<button class=https://localhost:7284/Carts/Details/5>Adaugă în coș</button>
+			</div>
+			<div class="description">
+				<h4>Descriere</h4>
+				<ul>
+					<li>Material: Aur 24k</li>
+					<li>Dimensiuni: colier1 - 45cm colier2 - 37cm</li>
+					<li>Bijuteriile ce compun acest set sunt realizate dintr-un aliaj unic de metale de cea mai bună calitate, placat cu un strat de rodiu care îl protejează de uzură și îi oferă o strălucire suplimentară. Propunerea noastră? O selecție unică de forme, alese pentru a exprima un stil fermecător – feminitate delicată, sensibilitate romantică. Linii simple și inserții cu cristale de zirconiu ce creează o impresie de tinerețe atemporală. Astfel, bijuteriile noastre reprezintă alegerea potrivită atât pentru zi, cât și pentru seară.</li>
+					<li>
+						Din dorința de a îți oferi o experiență cât mai plăcută, serviciul de asistență clienți este o prioritate pentru noi. Echipa noastra este pregătită pentru a te îndruma, de la alegerea unei bijuterii până la găsirea cadoulului perfect. Te așteptăm cu drag să ne contactezi.
+						Fiecare bijuterie beneficiază de garanție valabilă 1 an de la dată achiziției.
+						Toate bijuteriile noastre sunt împachetate cu dragoste și grijă în cutii de cadou – perfecte pentru a fi oferite în dar.
+					</li>
+				</ul>
+			</div>
+		<div class="col-md-6">
+			<div>
+				<a href="https://localhost:7284/Reviews">Add Review</a>
+			</div>
+		</div>
+			<div class="reviews">
+				<h2>Recenzii</h2>
+				<div class="review">
+					<h3>Utilizator 1</h3>
+					<p>Acest produs este minunat. Îmi place mult cum arată și se potrivește perfect cu stilul meu.</p>
+				</div>
+				<div class="review">
+					<h3>Utilizator 2</h3>
+					<p>Sunt foarte mulțumită de această bijuterie. Este de înaltă calitate și arată exact ca în poza de pe site.</p>
+				</div>
+				<div class="review">
+					<h3>Utilizator 3</h3>
+					<p>Am cumpărat acest produs pentru un cadou și a fost o alegere excelentă. Destul de elegant pentru a fi purtat la evenimente speciale, dar și destul de casual pentru a fi purtat zilnic.</p>
+				</div>
+			</div>
+		</main>
+
+		<footer>
+			<div class="container">
+				<ul class="footer__menu">
+					<a href="About.html">Despre noi</a>
+				</ul>
+			</div>
+		</footer>
+	</body>
+</html>

@@ -1,0 +1,260 @@
+﻿<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cosul meu</title>
+    <link rel="stylesheet" href="cartstyle.css">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            font-size: 16px;
+            color: #333;
+            background-color: #f7f7f7;
+            line-height: 1.5;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #FFC0CB;
+            color: #fff;
+            padding: 10px;
+            height: 90px;
+        }
+
+        .search-button {
+            background-color: #FFC0CB;
+            color: #fff;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+        }
+
+            .search-button:hover {
+                background-color: grey;
+            }
+
+            .search-button svg {
+                fill: currentColor;
+                vertical-align: middle;
+            }
+
+        input[type="text"] {
+            flex: 1;
+            padding: 8px;
+            border: 2px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        button[type="submit"] {
+            background-color: #FFC0CB;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            margin-left: 8px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        a {
+            display: inline-block;
+            padding: 10px 15px;
+            color: #808080;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+            a:hover {
+                text-decoration: underline;
+            }
+
+        li {
+            display: inline-block;
+            margin: 0 10px;
+        }
+
+        .logo img {
+            border-radius: 70%;
+        }
+
+        .logo p {
+            font-family: 'Helvetica Neue', sans-serif;
+            font-size: 18px;
+            letter-spacing: 1px;
+            text-align: center;
+            color: #CBA135;
+        }
+
+        .cart {
+            margin: 20px auto;
+            width: 80%;
+        }
+
+            .cart h2 {
+                border-bottom: 1px solid #ccc;
+                font-size: 24px;
+                margin-bottom: 20px;
+                padding-bottom: 10px;
+            }
+
+        .cart-items {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .item {
+            border: 1px solid #ccc;
+            display: flex;
+            margin-bottom: 10px;
+            padding: 10px;
+        }
+
+            .item img {
+                margin-right: 20px;
+            }
+
+        .item-info {
+            display: flex;
+            flex-direction: column;
+        }
+
+            .item-info h3 {
+                margin-bottom: 10px;
+            }
+
+            .item-info p {
+                font-size: 18px;
+                margin-bottom: 10px;
+            }
+
+            .item-info input {
+                width: 50px;
+                margin-right: 10px;
+            }
+
+        .remove-button {
+            background-color: grey;
+            color: pink;
+            border: none;
+            cursor: pointer;
+            margin-top: 10px;
+            border-radius: 5px;
+            font-size: 16px;
+            padding: 10px 20px;
+        }
+
+            .remove-button:hover {
+                background-color: pink;
+                color: grey;
+            }
+
+        .cart-total {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .checkout-button {
+            background-color: pink;
+            border: none;
+            color: grey;
+            cursor: pointer;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+            padding: 10px 20px;
+        }
+
+            .checkout-button:hover {
+                background-color: grey;
+                color: pink;
+            }
+
+        footer {
+            background-color: #333;
+            color: #808080;
+            ;
+            padding: 20px;
+        }
+
+            footer a {
+                color: #FFC0CB;
+            }
+
+        .footer container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">
+            <a href=https://localhost:7284/Home/Index><img src=https://i.pinimg.com/564x/24/c5/19/24c51940009a89449a3f0d0df6c96554.jpg alt="SparkleJewelers logo" width="150" height="150"></a>
+            <p>SparkleJewelers</p>
+        </div>
+        <div class="links">
+            <a href="Jewelers.html">Bijuterii</a>
+            <a href="#">Accesorii</a>
+            <a href="#">Branduri</a>
+            <li>
+                <form>
+                    <input type="text" placeholder="Căutare...">
+                    <button type="submit" class="search-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+                            <path d="M9.5 18a8.5 8.5 0 1 1 5.989-2.493l5.527 5.525a1.5 1.5 0 0 1-2.122 2.122l-5.525-5.527A8.45 8.45 0 0 1 9.5 18zm0-14a5.5 5.5 0 1 0 5.5 5.5A5.507 5.507 0 0 0 9.5 4z" />
+                        </svg>
+                    </button>
+                </form>
+
+            </li>
+            <a href="Profile.html">Profil</a>
+            <a href="#">Cosul meu</a>
+        </div>
+    </div>
+
+    <main>
+        <section class="cart">
+            <h2>Lista produse</h2>
+            <ul class="cart-items">
+                <li class="item">
+                    <img src=https://i.pinimg.com/236x/48/38/bb/4838bbe4339731240c07679b3ae7d67f.jpg alt="Product Image">
+                    <div class="item-info">
+                        <h3>Lantisor</h3>
+                        <p>Pret: 500 lei</p>
+                        <input type="number" value="1">
+                        <button class="remove-button">Sterge</button>
+                    </div>
+                </li>
+            </ul>
+
+            <div class="cart-total">
+                <h3>Total: 500 lei</h3>
+                <button class="checkout-button">Catre plata</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <ul class="footer__menu">
+                <a href="About.html">Despre noi</a>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>

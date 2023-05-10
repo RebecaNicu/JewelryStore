@@ -1,0 +1,347 @@
+﻿<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bijuterii</title>
+    <style>
+*{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: 'Poppins', sans-serif;
+	font-size: 16px;
+	color: #333;
+	background-color: #f7f7f7;
+	line-height: 1.5;
+}
+
+.navbar {
+        display: flex; 
+        justify-content: space-between;       
+        align-items: center;          
+        background-color: #FFC0CB;   
+        color: #fff;                
+        padding: 10px; 
+        height: 90px;           
+}
+
+.search-button {
+  background-color: #FFC0CB;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.search-button:hover {
+  background-color: grey;
+}
+
+.search-button svg {
+  fill: currentColor;
+  vertical-align: middle;
+}
+
+input[type="text"] {
+  flex: 1;
+  padding: 8px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+button[type="submit"] {
+  background-color: #FFC0CB;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  margin-left: 8px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+
+a {
+        display: inline-block;
+        padding: 10px 15px;
+        color: #808080;
+        text-decoration: none;
+        font-size: 18px;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+li {
+        display: inline-block;
+        margin: 0 10px;
+}
+
+.logo img {
+        border-radius: 70%;
+}
+
+.logo p {
+        font-family: 'Helvetica Neue', sans-serif;
+        font-size: 18px;
+        letter-spacing: 1px;
+        text-align: center;
+        color:#CBA135;
+}  
+
+.card {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+  flex-basis: 25%;
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  width: 300px;
+  height: 500px;
+}
+
+.card-columns {
+    -webkit-column-count: 3;
+    -moz-column-count: 3;
+    column-count: 3;
+    -webkit-column-gap: 1.25rem;
+    -moz-column-gap: 1.25rem;
+    column-gap: 1.25rem;
+    orphans: 1;
+    widows: 1;
+}
+
+.container.card-columns {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card:hover {
+  transform: translateY(-20px);
+}
+
+.card img {
+  object-fit: cover;
+  height: 300px;
+  width: 80%;
+}
+
+.card h5 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.card p {
+  font-size: 1rem;
+  color: #777;
+  margin-top: 0.5rem;
+}
+
+.card .btn-primary {
+  background-color: #F6DDCC;
+  border: none;
+  padding: 0.5rem 1rem;
+  margin: 4px 2px;
+  font-size: 1rem;
+  font-weight: bold;
+  color:grey;
+  cursor: pointer;
+  border-radius: 30px; 
+  transition: background-color 0.2s ease;
+}
+
+.card .btn-primary:hover {
+  background-color: grey;
+  color: #F6DDCC;
+}
+
+/* CSS pentru container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.container .row {
+  margin-top: 2rem;
+  display: table;
+  width: 100%;
+  table-layout: fixed
+}
+
+.container .col {
+  display: table-cell;
+  vertical-align: top;
+}
+
+footer {
+        background-color: #333;
+        color:#808080; ;
+        padding: 20px;
+}
+
+footer a {
+        color: #FFC0CB;
+}
+
+.footer container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+}
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">
+            <a href=https://localhost:7284/Home/Index><img src=https://i.pinimg.com/564x/24/c5/19/24c51940009a89449a3f0d0df6c96554.jpg alt="SparkleJewelers logo" width="150" height="150"></a>
+            <p>SparkleJewelers</p>
+        </div>
+        <div class="links">
+            <a href="#">Bijuterii</a>
+            <a href=https://localhost:7284/Categories>Categorii</a>
+            <a href="#">Branduri</a>
+            <li>
+                <form>
+                    <input type="text" placeholder="Căutare...">
+                    <button type="submit" class="search-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+                            <path d="M9.5 18a8.5 8.5 0 1 1 5.989-2.493l5.527 5.525a1.5 1.5 0 0 1-2.122 2.122l-5.525-5.527A8.45 8.45 0 0 1 9.5 18zm0-14a5.5 5.5 0 1 0 5.5 5.5A5.507 5.507 0 0 0 9.5 4z" />
+                        </svg>
+                    </button>
+                </form>
+            </li>
+            <a href="Profile.html">Profil</a>
+            <a href=https://localhost:7284/Carts>Cosul meu</a>
+        </div>
+    </div>
+
+    <div class="container mt-5">
+        <div class="row">
+            <div class="container card-columns">
+                <div class="col">
+                    <div class="card">
+                        <a href=https://localhost:7284/Jewels/Details/25>
+                            <img src=https://i.pinimg.com/236x/48/38/bb/4838bbe4339731240c07679b3ae7d67f.jpg class="card-img-top" alt="...">
+                        </a>
+                        <div class="card-body">
+                            <h5 class="card-title">Lantisor</h5>
+                            <p class="card-text">Lorem ipsum amconsectetur bjhbsd.</p>
+                            <a href=https://localhost:7284/Carts/Details/5 class="btn btn-primary">Adauga in cos</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <img src="https://i.pinimg.com/236x/68/fc/28/68fc2872fbeccd0ff42504a09796587c.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Cercei</h5>
+                            <p class="card-text">Lorem ipsum amconsectetur bjhbsd.</p>
+                            <a href="#" class="btn btn-primary">Adauga in cos</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <img src="https://i.pinimg.com/236x/30/ac/16/30ac166a1e33e63c734f3d9b8b35efda.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Inel geometric</h5>
+                            <p class="card-text">Lorem ipsum amconsectetur bjhbsd.</p>
+                            <a href="#" class="btn btn-primary">Adauga in cos</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <img src="https://i.pinimg.com/236x/bd/b5/34/bdb53493c4d85df272e1c2aaa3dee6c6.jpg" class="card-img-top" alt="Bijuterie 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Lantisor aur</h5>
+                            <p class="card-text">Lorem ipsum amconsectetur bjhbsd.</p>
+                            <a href="#" class="btn btn-primary">Adauga in cos</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <img src="https://i.pinimg.com/236x/45/ea/06/45ea06ea89041c9fd313428acfafa9c1.jpg" class="card-img-top" alt="Bijuterie 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Bratara</h5>
+                            <p class="card-text">Lorem ipsum amconsectetur bjhbsd.</p>
+                            <a href="#" class="btn btn-primary">Adauga in cos</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <img src="https://i.pinimg.com/236x/f6/01/89/f60189f7155c90d3be9a68d9bf209b63.jpg" class="card-img-top" alt="Bijuterie 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Set cercei</h5>
+                            <p class="card-text">Lorem ipsum amconsectetur bjhbsd.</p>
+                            <a href="#" class="btn btn-primary">Adauga in cos</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <img src="https://i.pinimg.com/236x/d4/25/3a/d4253a44c80a21a982366211f1566df6.jpg" class="card-img-top" alt="Bijuterie 4">
+                        <div class="card-body">
+                            <h5 class="card-title">Inel si cercei cu perla</h5>
+                            <p class="card-text">Lorem ipsum amconsectetur bjhbsd.</p>
+                            <a href="#" class="btn btn-primary">Adauga in cos</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <img src="https://i.pinimg.com/236x/87/91/e6/8791e600f6fbf26323fba765a71aa9e0.jpg" class="card-img-top" alt="Bijuterie 4">
+                        <div class="card-body">
+                            <h5 class="card-title">Bratari</h5>
+                            <p class="card-text">Lorem ipsum amconsectetur bjhbsd.</p>
+                            <a href="#" class="btn btn-primary">Adauga in cos</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <img src="https://i.pinimg.com/236x/95/76/10/957610e0f886dadfadf937922e5f19ca.jpg" class="card-img-top" alt="Bijuterie 4">
+                        <div class="card-body">
+                            <h5 class="card-title">Inele</h5>
+                            <p class="card-text">Lorem ipsum amconsectetur bjhbsd.</p>
+                            <a href="#" class="btn btn-primary">Adauga in cos</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div>
+            <a href="https://localhost:7284/Brands">Add Brand</a>
+        </div>
+    </div>
+</body>
+
+    <footer>
+        <div class="container">
+            <ul class="footer__menu">
+                <a href="About.html">Despre noi</a>
+            </ul>
+        </div>
+    </footer>
+</html>

@@ -54,6 +54,7 @@ namespace JewelryStore.Areas.Identity.Pages.Account
 
                     if (result.Succeeded)
                     {
+                        TempData["TempData"] = "Logarea s-a realizat cu succes!";
                         //_notifyService.AddNotification("You have successfully logged in to your account.");
                         return RedirectToAction("", "Home");
                     }

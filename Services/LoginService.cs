@@ -33,13 +33,7 @@ namespace JewelryStore.Services
             {
                 return SignInResult.Failed;
             }
-
-            // Check if the user's email is confirmed
-            if (!user.EmailConfirmed)
-            {
-                _logger.LogError($"Email is not confirmed.");
-                throw new Exception($"Email is not confirmed.");
-            }
+           
 
             var result = await _signInManager.PasswordSignInAsync(email, password, rememberMe, lockoutOnFailure: false);
             if (result.Succeeded)

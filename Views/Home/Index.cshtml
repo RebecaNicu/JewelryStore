@@ -185,7 +185,12 @@
 		</div>
 		<partial name="_LoginPartial" />
 	</div>
-
+	@if (TempData["TempData"] != null)
+	{
+		<div class="alert alert-success" role="alert">
+			@TempData["TempData"]
+		</div>
+	}
 	<main>
 		<section class="banner">
 			<div class="container">

@@ -7,9 +7,11 @@ namespace JewelryStore.Models
     {
         public Cart? Cart { get; set; }
         public ICollection<Review> Reviews { get; } = new List<Review>();
-        string? UrlProfiePhoto { get; set; }
-        string? Address { get; set; }
-        string? firstName { get; set; } 
-        string? lastName { get; set; }
+        public string? UrlProfiePhoto { get; set; }
+        public string? Address { get; set; }
+        public string? firstName { get; set; }
+        public string? lastName { get; set; }
+
+
     }
 }

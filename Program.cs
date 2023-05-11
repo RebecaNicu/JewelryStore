@@ -5,6 +5,7 @@ using Microsoft.EntityFrameworkCore;
 using JewelryStore.Services.Interfaces;
 using JewelryStore.Services;
 using Microsoft.AspNetCore.Identity;
+using JewelryStore.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -37,7 +38,10 @@ builder.Services.AddScoped<IOrderService, OrderService>();
 builder.Services.AddScoped<IJewelOrderRepository, JewelOrderRepository>();
 builder.Services.AddScoped<IJewelOrderService, JewelOrderService>();
 
-builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = false).AddRoles<IdentityRole>()
+builder.Services.AddScoped<ILoginService, LoginService>();
+builder.Services.AddScoped<IRegisterService, RegisterService>();
+
+builder.Services.AddDefaultIdentity<User>(options => options.SignIn.RequireConfirmedAccount = false).AddRoles<IdentityRole>()
     .AddEntityFrameworkStores<JewelryStoreContext>();
 
 builder.Services.AddScoped<IRepositoryWrapper, RepositoryWrapper>();

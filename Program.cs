@@ -66,6 +66,13 @@ builder.Services.Configure<IdentityOptions>(options =>
     options.User.RequireUniqueEmail = true;
 });
 
+builder.Services.AddAuthentication()
+	.AddFacebook(options =>
+	{
+		options.AppId = builder.Configuration["App:FacebookClientId"];
+		options.AppSecret = builder.Configuration["App:FacebookClientSecret"];
+	});
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

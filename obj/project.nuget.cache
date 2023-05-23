@@ -1,12 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "zycpvPbhvQpO4XoxPOy+BaRAl2OtWojkW8oetzlut9UN8lGIeqrlLVTprZ6jDCsIsrlLhIOqtYqCVWiiQGg8qw==",
+  "dgSpecHash": "PtkfMi1Da3IMRaS9LUVBl4+1utKRrLv7CLetFSZOAHUrx0IBwdxfZSVfc9pn/v/iZMODU//mNnN31lVMFzQImg==",
   "success": true,
   "projectFilePath": "D:\\Desktop\\FacultateAn3\\Sem2\\PAW\\JewelryStore\\JewelryStore.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Rebeca\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\Rebeca\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
     "C:\\Users\\Rebeca\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
+    "C:\\Users\\Rebeca\\.nuget\\packages\\microsoft.aspnetcore.authentication.facebook\\7.0.5\\microsoft.aspnetcore.authentication.facebook.7.0.5.nupkg.sha512",
     "C:\\Users\\Rebeca\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\7.0.5\\microsoft.aspnetcore.cryptography.internal.7.0.5.nupkg.sha512",
     "C:\\Users\\Rebeca\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\7.0.5\\microsoft.aspnetcore.cryptography.keyderivation.7.0.5.nupkg.sha512",
     "C:\\Users\\Rebeca\\.nuget\\packages\\microsoft.aspnetcore.identity.entityframeworkcore\\7.0.5\\microsoft.aspnetcore.identity.entityframeworkcore.7.0.5.nupkg.sha512",

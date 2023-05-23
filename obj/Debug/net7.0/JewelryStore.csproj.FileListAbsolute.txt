@@ -282,3 +282,4 @@ D:\Desktop\FacultateAn3\Sem2\PAW\JewelryStore\bin\Debug\net7.0\Microsoft.Extensi
 D:\Desktop\FacultateAn3\Sem2\PAW\JewelryStore\bin\Debug\net7.0\Microsoft.Extensions.Identity.Stores.dll
 D:\Desktop\FacultateAn3\Sem2\PAW\JewelryStore\bin\Debug\net7.0\Microsoft.Extensions.Options.dll
 D:\Desktop\FacultateAn3\Sem2\PAW\JewelryStore\obj\Debug\net7.0\JewelryStore.MvcApplicationPartsAssemblyInfo.cs
+D:\Desktop\FacultateAn3\Sem2\PAW\JewelryStore\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.Facebook.dll

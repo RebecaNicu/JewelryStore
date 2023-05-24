@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "XMu4saRomnuoP/HZLOyXNb+gDJPBjDy5H/eJ0XP/D1o=",
+  "Hash": "sN13eqYKKFW5AMpgGrbR98mT7jDhK3Pau+bKjlZSApI=",
   "Source": "JewelryStore",
   "BasePath": "_content/JewelryStore",
   "Mode": "Default",
@@ -1069,6 +1069,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "D:\\Desktop\\FacultateAn3\\Sem2\\PAW\\JewelryStore\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\JewelryStore.bundle.scp.css"
+    },
+    {
+      "Identity": "D:\\Desktop\\FacultateAn3\\Sem2\\PAW\\JewelryStore\\wwwroot\\css\\jewels.css",
+      "SourceId": "JewelryStore",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Desktop\\FacultateAn3\\Sem2\\PAW\\JewelryStore\\wwwroot\\",
+      "BasePath": "_content/JewelryStore",
+      "RelativePath": "css/jewels.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\jewels.css"
+    },
+    {
+      "Identity": "D:\\Desktop\\FacultateAn3\\Sem2\\PAW\\JewelryStore\\wwwroot\\css\\review.css",
+      "SourceId": "JewelryStore",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Desktop\\FacultateAn3\\Sem2\\PAW\\JewelryStore\\wwwroot\\",
+      "BasePath": "_content/JewelryStore",
+      "RelativePath": "css/review.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\review.css"
     },
     {
       "Identity": "D:\\Desktop\\FacultateAn3\\Sem2\\PAW\\JewelryStore\\wwwroot\\css\\site.css",

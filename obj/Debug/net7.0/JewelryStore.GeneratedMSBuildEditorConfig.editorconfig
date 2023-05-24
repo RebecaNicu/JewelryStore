@@ -288,6 +288,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSmV3ZWxPcmRlcnNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/Desktop/FacultateAn3/Sem2/PAW/JewelryStore/Views/JewelsPage/JewelPage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSmV3ZWxzUGFnZVxKZXdlbFBhZ2UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Desktop/FacultateAn3/Sem2/PAW/JewelryStore/Views/Jewels/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSmV3ZWxzXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -326,6 +330,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/Desktop/FacultateAn3/Sem2/PAW/JewelryStore/Views/Orders/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Desktop/FacultateAn3/Sem2/PAW/JewelryStore/Views/ReviewPage/ReviewPage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmV2aWV3UGFnZVxSZXZpZXdQYWdlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Desktop/FacultateAn3/Sem2/PAW/JewelryStore/Views/Reviews/Create.cshtml]

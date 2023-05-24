@@ -13,5 +13,6 @@
         public List<JewelCart>? JewelCarts { get; set; }
         public List<JewelOrder>? JewelOrders { get; set; }
         public List<Review>? Reviews { get; set; }
+        public string? UrlJewelPhoto { get; set; }
     }
 }

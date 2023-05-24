@@ -1,0 +1,73 @@
+﻿﻿
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bijuterii</title>
+    <link rel="stylesheet" href="~/css/jewels.css">
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">
+            <a href=https://localhost:7284/Home/Index><img src=https://i.pinimg.com/564x/24/c5/19/24c51940009a89449a3f0d0df6c96554.jpg alt="SparkleJewelers logo" width="150" height="150"></a>
+            <p>SparkleJewelers</p>
+        </div>
+        <div class="links">
+            <a href="#">Bijuterii</a>
+            <a href=https://localhost:7284/Categories>Categorii</a>
+            <a href="#">Branduri</a>
+            <li>
+                <form>
+                    <input type="text" placeholder="Căutare...">
+                    <button type="submit" class="search-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+                            <path d="M9.5 18a8.5 8.5 0 1 1 5.989-2.493l5.527 5.525a1.5 1.5 0 0 1-2.122 2.122l-5.525-5.527A8.45 8.45 0 0 1 9.5 18zm0-14a5.5 5.5 0 1 0 5.5 5.5A5.507 5.507 0 0 0 9.5 4z" />
+                        </svg>
+                    </button>
+                </form>
+            </li>
+            <a href="Profile.html">Profil</a>
+            <a href=https://localhost:7284/Carts>Cosul meu</a>
+        </div>
+    </div>
+
+    <div class="container mt-5">
+        <div class="row">
+            <div class="container card-columns">
+                <div class="col">
+                    <div class="card">
+                        @{
+
+                            IEnumerable<Jewel> jewels = ViewData["Jewels"] as IEnumerable<Jewel>;
+                        }
+                        @foreach (Jewel jewel in jewels)
+                        {
+                            <li class="list-group-item list-group-item-action mb-2 rounded">
+                                <a asp-area="" asp-controller="ReviewPage" asp-action="ReviewPage" asp-route-jewelId="@jewel.JewelId" class="text-decoration-none">
+                                    <img class="card-img-top"
+                                         src="@jewel.UrlJewelPhoto"
+                                         alt="Card image cap">
+                                    <span class="fa fa-circle pr-1"></span> @jewel.JewelName
+                                    <br/>
+                                    <br />
+                                    <span class="fa fa-circle pr-1"></span> @jewel.Price Lei
+                                </a>
+                            </li>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<footer>
+    <div class="container">
+        <ul class="footer__menu">
+            <a href=#>Despre noi</a>
+        </ul>
+    </div>
+</footer>
+</html>

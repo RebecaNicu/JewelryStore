@@ -1,0 +1,90 @@
+﻿<!DOCTYPE html>
+<html lang="ro">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Lantisor</title>
+	<link rel="stylesheet" href="~/css/review.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<style>
+	.star-yellow {
+		color: #FFD700;
+	}
+</style>
+<body>
+	<div class="navbar">
+		<div class="logo">
+			<a href="Home.html"><img src=https://i.pinimg.com/564x/24/c5/19/24c51940009a89449a3f0d0df6c96554.jpg alt="SparkleJewelers logo" width="150" height="150"></a>
+			<p>SparkleJewelers</p>
+		</div>
+		<div class="links">
+			<a href="Jewelers.html">Bijuterii</a>
+			<a href="#">Accesorii</a>
+			<a href="#">Branduri</a>
+			<li>
+				<form>
+					<input type="text" placeholder="Căutare...">
+					<button type="submit" class="search-button">
+						<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+							<path d="M9.5 18a8.5 8.5 0 1 1 5.989-2.493l5.527 5.525a1.5 1.5 0 0 1-2.122 2.122l-5.525-5.527A8.45 8.45 0 0 1 9.5 18zm0-14a5.5 5.5 0 1 0 5.5 5.5A5.507 5.507 0 0 0 9.5 4z" />
+						</svg>
+					</button>
+				</form>
+
+			</li>
+			<a href="Profile.html">Profil</a>
+			<a href="Cart.html">Cosul meu</a>
+		</div>
+	</div>
+	</body>
+
+	<body>
+		<main>
+		@{
+			Jewel jewel = ViewData["Jewel"] as Jewel;
+		IEnumerable<Review> reviews = ViewData["Reviews"] as IEnumerable<Review>;
+		}
+		<div class="card">
+			<img src="@jewel.UrlJewelPhoto" alt="Bijuterie">
+			<h2>@jewel.JewelName</h2>  
+			<p>Preț: @jewel.Price lei</p>
+			<button class="buy-btn">Adaugă în coș</button>
+		</div>
+		<div class="description">
+			<h4>Descriere</h4>
+			<ul>
+				<li>@jewel.Details</li>
+		</div>
+		<div class="reviews">
+			<h2>Recenzii</h2>
+
+			@foreach (var review in reviews)
+			{
+				@if (review.JewelId == jewel.JewelId)
+				{
+					<div class="review">
+						<h4>@review.User.firstName</h4>
+						<p>@review.Title</p>
+						<p>@review.Body</p>
+						<p>
+							@for (int i = 0; i < review.StarValue; i++)
+							{
+								<i class="fas fa-star star-yellow"></i>
+							}
+						</p>
+					</div>
+				}
+			}
+		</div>
+
+	</main>
+
+		<footer>
+			<div class="container">
+				<ul class="footer__menu">
+					<a href="About.html">Despre noi</a>
+				</ul>
+		</footer>
+	</body>
+</html>

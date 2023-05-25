@@ -1,5 +1,4 @@
-﻿﻿
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="ro">
 <head>
     <meta charset="UTF-8">
@@ -12,7 +11,6 @@
     <div class="navbar">
         <div class="logo">
             <a href=https://localhost:7284/Home/Index><img src=https://i.pinimg.com/564x/24/c5/19/24c51940009a89449a3f0d0df6c96554.jpg alt="SparkleJewelers logo" width="150" height="150"></a>
-            <p>SparkleJewelers</p>
         </div>
         <div class="links">
             <a href="#">Bijuterii</a>
@@ -35,28 +33,31 @@
     <div class="container mt-5">
         <div class="row">
             <div class="container card-columns">
+        @{
+
+            IEnumerable<Jewel> jewels = ViewData["Jewels"] as IEnumerable<Jewel>;
+        }
+        @foreach (Jewel jewel in jewels) {
+        
+            
                 <div class="col">
                     <div class="card">
-                        @{
-
-                            IEnumerable<Jewel> jewels = ViewData["Jewels"] as IEnumerable<Jewel>;
-                        }
-                        @foreach (Jewel jewel in jewels)
-                        {
+                       
                             <li class="list-group-item list-group-item-action mb-2 rounded">
                                 <a asp-area="" asp-controller="ReviewPage" asp-action="ReviewPage" asp-route-jewelId="@jewel.JewelId" class="text-decoration-none">
                                     <img class="card-img-top"
                                          src="@jewel.UrlJewelPhoto"
                                          alt="Card image cap">
                                     <span class="fa fa-circle pr-1"></span> @jewel.JewelName
-                                    <br/>
+                                    <br />
                                     <br />
                                     <span class="fa fa-circle pr-1"></span> @jewel.Price Lei
                                 </a>
                             </li>
-                        }
+                       
                     </div>
-                </div>
+                </div>        
+        }
             </div>
         </div>
     </div>

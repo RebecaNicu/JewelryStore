@@ -17,11 +17,11 @@ body {
 .navbar {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     background-color: #FFC0CB;
     color: #fff;
     padding: 10px;
-    height: 90px;
+    height: 150px;
 }
 
 .search-button {
@@ -103,6 +103,7 @@ li {
     flex-direction: column;
     text-align: center;
     width: 300px;
+    margin-bottom: 20px;
     height: 500px;
 }
 
@@ -130,19 +131,20 @@ li {
 .card img {
     object-fit: cover;
     height: 300px;
-    width: 80%;
+    width: 100%;
 }
 
 .card h5 {
     font-size: 1.5rem;
     font-weight: bold;
-    margin-top: 10px;
+    margin-top: 5px;
 }
 
 .card p {
     font-size: 1rem;
     color: #777;
     margin-top: 0.5rem;
+    margin-bottom: 10px;
 }
 
 .card .btn-primary {
@@ -179,15 +181,14 @@ li {
         table-layout: fixed
     }
 
-    .container .col {
-        display: table-cell;
-        vertical-align: top;
-    }
+.container .col {
+     display: table-cell;
+     vertical-align: top;
+}
 
 footer {
     background-color: #333;
     color: #808080;
-    ;
     padding: 20px;
 }
 

@@ -10,18 +10,24 @@ body {
     font-family: 'Poppins', sans-serif;
     font-size: 16px;
     color: #333;
+    margin-top: 100px;
     background-color: #f7f7f7;
     line-height: 1.5;
 }
 
 .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start; /* Modificare aici */
     background-color: #FFC0CB;
     color: #fff;
     padding: 10px;
     height: 90px;
+    z-index: 9999;
 }
 
 .search-button {
@@ -62,7 +68,6 @@ button[type="submit"] {
     cursor: pointer;
 }
 
-
 a {
     display: inline-block;
     padding: 10px 15px;
@@ -71,17 +76,23 @@ a {
     font-size: 18px;
 }
 
-    a:hover {
+ a:hover {
         text-decoration: underline;
     }
 
-li {
-    display: inline-block;
-    margin: 0 10px;
+.links {
+    display: flex;
+    align-items: center;
+}
+
+.links a {
+    margin-left: 10px;
 }
 
 .logo img {
     border-radius: 70%;
+    margin-top: -20;
+    align-self: flex-start;
 }
 
 .logo p {
@@ -90,14 +101,14 @@ li {
     letter-spacing: 1px;
     text-align: center;
     color: #CBA135;
+    align-self: flex-start;
 }
 
 #despre {
     text-align: left;
-    margin-top: 80px;
+    margin-top: 160px;
     color: grey;
 }
-
 
 #contact {
     background-color: #F6DDCC;
@@ -131,14 +142,6 @@ input[type="email"] {
         outline: none;
         box-shadow: 0 0 5px #FFC0CB;
     }
-
-#mesaj {
-    padding: 8px;
-    border: 2px solid #ccc;
-    background-color: #f1f1f1;
-    border-radius: 4px;
-    font-size: 16px;
-}
 
 p {
     font-size: 18px;

@@ -5,170 +5,202 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Magazin online de bijuterii și accesorii</title>
 	<style>
-		
-		   *{
-		   box-sizing: border-box;
-		   margin: 0;
-		   padding: 0;
-		   }
+		* {
+			box-sizing: border-box;
+			margin: 0;
+			padding: 0;
+		}
 
-		   body {
-		   font-family: 'Poppins' , sans-serif;
-		   font-size: 16px;
-		   color: #333;
-		   background-color: #f7f7f7;
-		   line-height: 1.5;
-		   }
-		   .navbar {
-		   display: flex;
-		   justify-content: space-between;
-		   align-items: center;
-		   background-color: #FFC0CB;
-		   color: #fff;
-		   padding: 10px;
-		   height: 90px;
-		   }
-		   .search-button {
-		   background-color: #FFC0CB;
-		   color: #fff;
-		   border: none;
-		   padding: 0.5rem 1rem;
-		   border-radius: 20px;
-		   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
-		   cursor: pointer;
-		   }
-		   .search-button:hover {
-		   background-color: grey;
-		   }
-		   .search-button svg {
-		   fill: currentColor;
-		   vertical-align: middle;
-		   }
-		   input[type="text" ] {
-		   flex: 1;
-		   padding: 8px;
-		   border: 2px solid #ccc;
-		   border-radius: 4px;
-		   font-size: 16px;
-		   }
-		   button[type="submit" ] {
-		   background-color: #FFC0CB;
-		   color: white;
-		   border: none;
-		   padding: 8px 16px;
-		   border-radius: 4px;
-		   margin-left: 8px;
-		   font-size: 16px;
-		   cursor: pointer;
-		   }
-		   a {
-		   display: inline-block;
-		   padding: 10px 15px;
-		   color: #808080;
-		   text-decoration: none;
-		   font-size: 18px;
-		   }
-		   a:hover {
-		   text-decoration: underline;
-		   }
-		   li {
-		   display: inline-block;
-		   margin: 0 10px;
-		   }
-		   .logo img {
-		    border-radius: 70%;
+		body {
+			font-family: 'Poppins', sans-serif;
+			font-size: 16px;
+			color: #333;
+			background-color: #f7f7f7;
+			line-height: 1.5;
+		}
+
+		.navbar {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			background-color: #FFC0CB;
+			color: #fff;
+			padding: 10px;
+			height: 200px;
+		}
+
+		.search-button {
+			background-color: #FFC0CB;
+			color: #fff;
+			border: none;
+			padding: 0.5rem 1rem;
+			border-radius: 20px;
+			box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+			cursor: pointer;
+		}
+
+			.search-button:hover {
+				background-color: grey;
+			}
+
+			.search-button svg {
+				fill: currentColor;
+				vertical-align: middle;
+			}
+
+		input[type="text" ] {
+			flex: 1;
+			padding: 8px;
+			border: 2px solid #ccc;
+			border-radius: 4px;
+			font-size: 16px;
+		}
+
+		button[type="submit" ] {
+			background-color: #FFC0CB;
+			color: white;
+			border: none;
+			padding: 8px 16px;
+			border-radius: 4px;
+			margin-left: 8px;
+			font-size: 16px;
+			cursor: pointer;
+		}
+
+		a {
+			display: inline-block;
+			padding: 10px 15px;
+			color: #808080;
+			text-decoration: none;
+			font-size: 18px;
+		}
+
+			a:hover {
+				text-decoration: underline;
+			}
+
+		li {
+			display: inline-block;
+			margin: 0 10px;
+			list-style: none;
+		}
+
+		.logo img {
+			border-radius: 70%;
 			position: absolute;
-			top: -50px; 
-		   }
-		   .logo p {
-		   font-family: 'Helvetica Neue' , sans-serif;
-		   font-size: 18px;
-		   letter-spacing: 1px;
-		   text-align: center;
-		   color:#CBA135;
-			margin-top: 50px; 
-		   }
-		   .container {
-		   max-width: 1200px;
-		   margin: 0 auto;
-		   padding: 0 20px;
-		   }
-		   .banner {
-		   height: 500px;
-		   background-image: url(".. /img/banner.jpg");
-		   background-size: cover;
-		   background-position: center;
-		   display: flex;
-		   align-items: center;
-		   justify-content: center;
-		   text-align: center;
-		   color: #808080;
-		   }
-		   .banner h1 {
-		   font-size: 50px;
-		   margin-bottom: 20px;
-		   }
-		   .banner p {
-		   font-size: 24px;
-		   margin-bottom: 30px;
-		   }
-		   .banner a {
-		   display: inline-block;
-		   background-color: #808080;
-		   color: #FFC0CB;
-		   padding: 15px 25px;
-		   border-radius: 25px;
-		   font-size: 18px;
-		   transition: all 0.3s ease;
-		   }
-		   .section-title {
-		   font-size: 36px;
-		   margin-bottom: 30px;
-		   text-align: center;
-		   color: #808080;
-		   }
-		   .brands {
-		   margin-top: 50px;
-		   }
-		   .brand-list {
-		   display: flex;
-		   align-items: center;
-		   justify-content: space-between;
-		   flex-wrap: wrap;
-		   }
-		   .brand {
-		   width: calc(20% - 20px);
-		   margin-bottom: 30px;
-		   text-align: center;
-		   }
-		   .brand img {
-		   max-width: 100%;
-		   }
-		   footer {
-		   background-color: #333;
-		   color:#808080;
-		   padding: 20px;
-		   }
-		   footer a {
-		   color: #FFC0CB;
-		   }
-		   .footer container {
-		   display: flex;
-		   justify-content: space-between;
-		   align-items: center;
-		   } 
-		   </style>
+			top: -50px;
+		}
+
+		.logo p {
+			font-family: 'Helvetica Neue', sans-serif;
+			font-size: 18px;
+			letter-spacing: 1px;
+			text-align: center;
+			color: #CBA135;
+			margin-top: 50px;
+		}
+
+		.container {
+			max-width: 1200px;
+			margin: 0 auto;
+			padding: 0 20px;
+		}
+
+		.banner {
+			height: 500px;
+			background-image: url(".. /img/banner.jpg");
+			background-size: cover;
+			background-position: center;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			text-align: center;
+			color: #808080;
+		}
+
+			.banner h1 {
+				font-size: 50px;
+				margin-bottom: 20px;
+			}
+
+			.banner p {
+				font-size: 24px;
+				margin-bottom: 30px;
+			}
+
+			.banner a {
+				display: inline-block;
+				background-color: #808080;
+				color: #FFC0CB;
+				padding: 15px 25px;
+				border-radius: 25px;
+				font-size: 18px;
+				transition: all 0.3s ease;
+			}
+
+		.section-title {
+			font-size: 36px;
+			margin-bottom: 30px;
+			text-align: center;
+			color: #808080;
+		}
+
+		.brands {
+			margin-top: 50px;
+		}
+
+		.brand-list {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			flex-wrap: wrap;
+		}
+
+		.brand {
+			width: calc(20% - 20px);
+			margin-bottom: 30px;
+			text-align: center;
+		}
+
+			.brand img {
+				max-width: 100%;
+			}
+
+		footer {
+			background-color: #333;
+			color: #808080;
+			padding: 20px;
+		}
+
+			footer a {
+				color: #FFC0CB;
+			}
+
+		.footer-container {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+
+		.navbar-links {
+			display: flex;
+			align-items: center;
+		}
+
+			.navbar-links a {
+				margin-left: 10px;
+			}
+	</style>
 </head>
 <body>
 	<div class="navbar">
 		<div class="logo">
-			<a href="#"><img src=https://i.pinimg.com/564x/24/c5/19/24c51940009a89449a3f0d0df6c96554.jpg alt="SparkleJewelers logo" width="150" height="150"></a>
-			<p>SparkleJewelers</p>
+			<a href="#"><img src="https://i.pinimg.com/564x/24/c5/19/24c51940009a89449a3f0d0df6c96554.jpg" alt="SparkleJewelers logo" width="150" height="150"></a>
 		</div>
-		<div class="links">
+		<div class="links navbar-links">
 			<a class="nav-link text-dark" asp-area="" asp-controller="JewelsPage" asp-action="jewelPage">Bijuterii</a>
-			<a href=https://localhost:7284/Categories>Categorii</a>
-			<a href=https://localhost:7284/Brands>Branduri</a>
+			<a href="https://localhost:7284/Categories">Categorii</a>
+			<a href="https://localhost:7284/Brands">Branduri</a>
 			<form>
 				<input type="text" placeholder="Căutare...">
 				<button type="submit" class="search-button">
@@ -177,7 +209,7 @@
 					</svg>
 				</button>
 			</form>
-			<a href=https://localhost:7284/Carts>Cosul meu</a>
+			<a href="https://localhost:7284/Carts">Cosul meu</a>
 		</div>
 		<partial name="_LoginPartial" />
 	</div>
@@ -201,19 +233,19 @@
 				<h2 class="section-title">Cele mai cautate produse</h2>
 				<div class="brand-list">
 					<div class="brand">
-						<a href="#"><img src=https://i.pinimg.com/236x/d8/9d/3b/d89d3b8a81de3db6b5a46d1f68cbbd9a.jpg alt="Brand 1"></a>
+						<a href="#"><img src="https://i.pinimg.com/236x/d8/9d/3b/d89d3b8a81de3db6b5a46d1f68cbbd9a.jpg" alt="Brand 1"></a>
 					</div>
 					<div class="brand">
-						<a href="#"><img src=https://i.pinimg.com/236x/ab/e1/73/abe173125482be5acfbf066e2b22dadf.jpg alt="Brand 2"></a>
+						<a href="#"><img src="https://i.pinimg.com/236x/ab/e1/73/abe173125482be5acfbf066e2b22dadf.jpg" alt="Brand 2"></a>
 					</div>
 					<div class="brand">
-						<a href="#"><img src=https://i.pinimg.com/236x/8f/1c/48/8f1c489fbeb7242714f77b1f226f4794.jpg alt="Brand 3"></a>
+						<a href="#"><img src="https://i.pinimg.com/236x/8f/1c/48/8f1c489fbeb7242714f77b1f226f4794.jpg" alt="Brand 3"></a>
 					</div>
 					<div class="brand">
-						<a href="#"><img src=https://i.pinimg.com/236x/ab/16/05/ab1605a17fb133ca12e2e6f190d4218e.jpg alt="Brand 4"></a>
+						<a href="#"><img src="https://i.pinimg.com/236x/ab/16/05/ab1605a17fb133ca12e2e6f190d4218e.jpg" alt="Brand 4"></a>
 					</div>
 					<div class="brand">
-						<a href="#"><img src=https://i.pinimg.com/236x/99/07/65/9907650ec6513a6224ebd61b3d103296.jpg alt="Brand 5"></a>
+						<a href="#"><img src="https://i.pinimg.com/236x/99/07/65/990765b043a7f36475eaa2b40c8b45dd.jpg" alt="Brand 5"></a>
 					</div>
 				</div>
 			</div>
@@ -223,7 +255,7 @@
 	<footer>
 		<div class="container">
 			<ul class="footer__menu">
-				<a asp-area ="" asp-controller="ContactsPage" asp-action="ContactPage" class="text-decoration-none"> About and Contact </a>
+				<a asp-area="" asp-controller="ContactsPage" asp-action="ContactPage" class="text-decoration-none">About and Contact</a>
 			</ul>
 		</div>
 	</footer>

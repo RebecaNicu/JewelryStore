@@ -16,9 +16,9 @@ namespace JewelryStore.Controllers
 
             // GET: ProdusePagina
             public JewelsPageController(IJewelService jewelService)
-                {
-                    _jewelService = jewelService;
-                }
+            {
+                _jewelService = jewelService;
+            }
 
             public ActionResult jewelPage()
             {

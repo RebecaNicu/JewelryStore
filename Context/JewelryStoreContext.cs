@@ -11,7 +11,8 @@ namespace JewelryStore.Context
             : base(options) { }
 
         public DbSet<Brand> Brands { get; set; }
-        public DbSet<Cart> Carts { get; set; }
+		public DbSet<Contact> Contacts { get; set; }
+		public DbSet<Cart> Carts { get; set; }
         public DbSet<Category> Categories { get; set; }
         public DbSet<Jewel> Jewels { get; set; }
         public DbSet<JewelCart> JewelCarts { get; set; }

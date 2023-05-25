@@ -11,5 +11,6 @@ namespace JewelryStore.Services.Interfaces
         void Delete(int id);
         List<Review> GetAllReviews();
         Review GetReviewById(int id);
-    }
+
+	}
 }

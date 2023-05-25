@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\JewelryStore.bundle.scp.css"
     },
     {
+      "Id": "D:\\Desktop\\FacultateAn3\\Sem2\\PAW\\JewelryStore\\wwwroot\\css\\about.css",
+      "PackagePath": "staticwebassets\\css\\about.css"
+    },
+    {
       "Id": "D:\\Desktop\\FacultateAn3\\Sem2\\PAW\\JewelryStore\\wwwroot\\css\\jewels.css",
       "PackagePath": "staticwebassets\\css\\jewels.css"
     },

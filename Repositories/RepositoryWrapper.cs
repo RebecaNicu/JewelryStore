@@ -14,8 +14,22 @@ namespace JewelryStore.Repositories
         private IJewelCartRepository? _jewelcartRepository;
         private IOrderRepository? _orderRepository;
         private IJewelOrderRepository? _jewelorderRepository;
+		private IContactRepository? _contactRepository;
 
-        public IJewelOrderRepository JewelOrderRepository
+		public IContactRepository ContactRepository
+		{
+			get
+			{
+				if (_contactRepository == null)
+				{
+					_contactRepository = new ContactRepository(_jeweleryContext);
+				}
+
+				return _contactRepository;
+			}
+		}
+
+		public IJewelOrderRepository JewelOrderRepository
         {
             get
             {

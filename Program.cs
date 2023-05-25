@@ -38,6 +38,9 @@ builder.Services.AddScoped<IOrderService, OrderService>();
 builder.Services.AddScoped<IJewelOrderRepository, JewelOrderRepository>();
 builder.Services.AddScoped<IJewelOrderService, JewelOrderService>();
 
+builder.Services.AddScoped<IContactRepository, ContactRepository>();
+builder.Services.AddScoped<IContactService, ContactService>();
+
 builder.Services.AddScoped<ILoginService, LoginService>();
 builder.Services.AddScoped<IRegisterService, RegisterService>();
 

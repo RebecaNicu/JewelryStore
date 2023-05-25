@@ -1,18 +1,23 @@
 ﻿using JewelryStore.Exceptions;
 using JewelryStore.Models;
+using JewelryStore.Repositories;
 using JewelryStore.Repositories.Interfaces;
 using JewelryStore.Services.Interfaces;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.CodeAnalysis;
+using Microsoft.EntityFrameworkCore;
 
 namespace JewelryStore.Services
 {
     public class ReviewService : IReviewService
     {
         private IRepositoryWrapper _repositoryWrapper;
+		private readonly UserManager<User> _userManager;
 
-        public ReviewService(IRepositoryWrapper repositoryWrapper)
+        public ReviewService(IRepositoryWrapper repositoryWrapper, UserManager<User> userManager)
         {
             _repositoryWrapper = repositoryWrapper;
+            _userManager = userManager;
         }
 
         public void Create(Review review)
@@ -51,5 +56,6 @@ namespace JewelryStore.Services
         {
             return _repositoryWrapper.ReviewRepository.FindByCondition(r => r.ReviewId == id).First();
         }
-    }
+
+	}
 }

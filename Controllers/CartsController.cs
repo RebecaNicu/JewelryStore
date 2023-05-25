@@ -22,8 +22,8 @@ namespace JewelryStore.Controllers
             _cartService = cartsService;
         }
 
-        [Authorize(Roles = "USER")]
-        public IActionResult Index()
+		[Authorize(Roles = "USER")]
+		public IActionResult Index()
         {
             var carts = _cartService.GetAllCarts();
             return View(carts);

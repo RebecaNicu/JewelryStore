@@ -1,0 +1,63 @@
+﻿<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Despre noi</title>
+    <link rel="stylesheet" href="~/css/about.css">
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">
+            <a href=https://localhost:7284/Home/Index><img src=https://i.pinimg.com/564x/24/c5/19/24c51940009a89449a3f0d0df6c96554.jpg alt="SparkleJewelers logo" width="150" height="150"></a>
+            <p>SparkleJewelers</p>
+        </div>
+        <div class="links">
+            <a class="nav-link text-dark" asp-area="" asp-controller="JewelsPage" asp-action="jewelPage">Bijuterii</a>
+            <a href="#">Accesorii</a>
+            <a href="#">Branduri</a>
+            <form>
+                <input type="text" placeholder="Căutare...">
+                <button type="submit" class="search-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+                        <path d="M9.5 18a8.5 8.5 0 1 1 5.989-2.493l5.527 5.525a1.5 1.5 0 0 1-2.122 2.122l-5.525-5.527A8.45 8.45 0 0 1 9.5 18zm0-14a5.5 5.5 0 1 0 5.5 5.5A5.507 5.507 0 0 0 9.5 4z" />
+                    </svg>
+                </button>
+            </form>
+            <a href="Cart.html">Cosul meu</a>
+        </div>
+    </div>
+
+    <div class="container mt-4" id="despre">
+        <h2>Despre noi</h2>
+        <p>Bine ai venit la magazinul nostru de bijuterii! Suntem o echipa de pasionati ai bijuteriilor, care creeaza piese unice si de calitate, folosind cele mai bune materiale si tehnici traditionale de productie.</p>
+        <p>Incepand de la simplu si elegant pana la piese indraznete si nonconformiste, bijuteriile noastre sunt create pentru a pune in evidenta personalitatea si stilul fiecarui client. Indiferent daca esti in cautarea unei bijuterii pentru o ocazie speciala sau pentru a-ti completa garderoba de zi cu zi, suntem aici pentru a te ajuta sa gasesti piesa perfecta.</p>
+        <p>De-a lungul anilor, am creat bijuterii pentru clienți din toate colțurile lumii, iar experiența noastră ne-a permis să dezvoltăm o colecție unică de bijuterii care reflectă frumusețea și diversitatea culturilor din întreaga lume.</p>
+        <p>Suntem mandri sa oferim servicii de calitate, atat in ceea ce priveste creatia bijuteriilor, cat si in ceea ce priveste experienta de cumparare. Suntem mereu disponibili pentru a oferi sfaturi si recomandari personalizate, astfel incat sa poti face cea mai buna alegere.</p>
+        <p>Va multumim pentru interesul acordat magazinului nostru de bijuterii si va asteptam cu drag sa descoperiti colectia noastra!</p>
+    </div>
+    <div class="container mt-4" id="contact">
+        <h2>Contact</h2>
+        @model  Contact
+
+        <form action="/" method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="mb-3">
+                <label for="name" class="form-label">Name</label>
+                <input asp-for="Name" type="text" class="form-control" id="Name" name="Name">
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input asp-for="Email" type="Email" class="form-control" id="Email" name="Email">
+            </div>
+            <div class="mb-3">
+                <label for="message" class="form-label">Message</label>
+                <textarea asp-for="Message" class="form-control" id="Message" name="Message" rows="5"></textarea>
+            </div>
+            <button type="submit" value="Create" class="btn btn-primary">Send Message</button>
+        </form>
+
+    </div>
+
+</body>
+</html>

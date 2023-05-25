@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿@using Microsoft.AspNetCore.Identity;
+<!DOCTYPE html>
 <html lang="ro">
 <head>
 	<meta charset="UTF-8">
@@ -12,10 +13,12 @@
 		color: #FFD700;
 	}
 </style>
+@inject SignInManager<User> SignInManager
+@inject UserManager<User> UserManager
 <body>
 	<div class="navbar">
 		<div class="logo">
-			<a href="Home.html"><img src=https://i.pinimg.com/564x/24/c5/19/24c51940009a89449a3f0d0df6c96554.jpg alt="SparkleJewelers logo" width="150" height="150"></a>
+			<a href=https://localhost:7284/Home/Index><img src=https://i.pinimg.com/564x/24/c5/19/24c51940009a89449a3f0d0df6c96554.jpg alt="SparkleJewelers logo" width="150" height="150"></a>
 			<p>SparkleJewelers</p>
 		</div>
 		<div class="links">
@@ -43,7 +46,8 @@
 		<main>
 		@{
 			Jewel jewel = ViewData["Jewel"] as Jewel;
-		IEnumerable<Review> reviews = ViewData["Reviews"] as IEnumerable<Review>;
+			IEnumerable<Review> reviews = ViewData["Reviews"] as IEnumerable<Review>;
+			User user = ViewData["User"] as User;
 		}
 		<div class="card">
 			<img src="@jewel.UrlJewelPhoto" alt="Bijuterie">
@@ -63,8 +67,13 @@
 			{
 				@if (review.JewelId == jewel.JewelId)
 				{
+					
 					<div class="review">
-						<h4>@review.User.firstName</h4>
+						@{
+							var current = await UserManager.FindByIdAsync(review.UserId);
+							var currentUser = current != null ? current.firstName : "Nume utilizator indisponibil";
+						}
+						<h4>@currentUser</h4>
 						<p>@review.Title</p>
 						<p>@review.Body</p>
 						<p>
@@ -74,7 +83,7 @@
 							}
 						</p>
 					</div>
-				}
+			    }
 			}
 		</div>
 
@@ -83,7 +92,7 @@
 		<footer>
 			<div class="container">
 				<ul class="footer__menu">
-					<a href="About.html">Despre noi</a>
+				<a asp-area="" asp-controller="ContactsPage" asp-action="ContactPage" class="text-decoration-none"> About and Contact </a>
 				</ul>
 		</footer>
 	</body>

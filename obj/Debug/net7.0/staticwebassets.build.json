@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "sN13eqYKKFW5AMpgGrbR98mT7jDhK3Pau+bKjlZSApI=",
+  "Hash": "MwHL0TJiG20ZiSyxjCp/4VFGcVqGrGuyIGe+eQ+HAA8=",
   "Source": "JewelryStore",
   "BasePath": "_content/JewelryStore",
   "Mode": "Default",
@@ -1069,6 +1069,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "D:\\Desktop\\FacultateAn3\\Sem2\\PAW\\JewelryStore\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\JewelryStore.bundle.scp.css"
+    },
+    {
+      "Identity": "D:\\Desktop\\FacultateAn3\\Sem2\\PAW\\JewelryStore\\wwwroot\\css\\about.css",
+      "SourceId": "JewelryStore",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Desktop\\FacultateAn3\\Sem2\\PAW\\JewelryStore\\wwwroot\\",
+      "BasePath": "_content/JewelryStore",
+      "RelativePath": "css/about.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\about.css"
     },
     {
       "Identity": "D:\\Desktop\\FacultateAn3\\Sem2\\PAW\\JewelryStore\\wwwroot\\css\\jewels.css",

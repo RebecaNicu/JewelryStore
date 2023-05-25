@@ -10,6 +10,7 @@
         IJewelCartRepository JewelCartRepository { get; }
         IOrderRepository OrderRepository { get; }
         IJewelOrderRepository JewelOrderRepository { get; }
-        void Save();
+		IContactRepository ContactRepository { get; }
+		void Save();
     }
 }

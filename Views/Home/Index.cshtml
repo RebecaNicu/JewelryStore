@@ -169,18 +169,14 @@
 			<a class="nav-link text-dark" asp-area="" asp-controller="JewelsPage" asp-action="jewelPage">Bijuterii</a>
 			<a href=https://localhost:7284/Categories>Categorii</a>
 			<a href=https://localhost:7284/Brands>Branduri</a>
-			<li>
-				<form>
-					<input type="text" placeholder="Căutare...">
-					<button type="submit" class="search-button">
-						<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
-							<path d="M9.5 18a8.5 8.5 0 1 1 5.989-2.493l5.527 5.525a1.5 1.5 0 0 1-2.122 2.122l-5.525-5.527A8.45 8.45 0 0 1 9.5 18zm0-14a5.5 5.5 0 1 0 5.5 5.5A5.507 5.507 0 0 0 9.5 4z" />
-						</svg>
-					</button>
-				</form>
-
-			</li>
-			<a href="Register.html">Inregistrare</a>
+			<form>
+				<input type="text" placeholder="Căutare...">
+				<button type="submit" class="search-button">
+					<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+						<path d="M9.5 18a8.5 8.5 0 1 1 5.989-2.493l5.527 5.525a1.5 1.5 0 0 1-2.122 2.122l-5.525-5.527A8.45 8.45 0 0 1 9.5 18zm0-14a5.5 5.5 0 1 0 5.5 5.5A5.507 5.507 0 0 0 9.5 4z" />
+					</svg>
+				</button>
+			</form>
 			<a href=https://localhost:7284/Carts>Cosul meu</a>
 		</div>
 		<partial name="_LoginPartial" />
@@ -196,7 +192,7 @@
 			<div class="container">
 				<h1 class="banner__title">Bijuterii și accesorii la prețuri accesibile</h1>
 				<p class="banner__text">Alege dintr-o gamă variată de bijuterii și accesorii, de la cele clasice la cele mai moderne, la cele mai bune prețuri.</p>
-				<a href=https://localhost:7284/Jewels class="btn btn-primary banner__btn">Vezi ofertele noastre</a>
+				<a class="nav-link text-dark" asp-area="" asp-controller="JewelsPage" asp-action="jewelPage">Vezi ofertele noastre</a>
 			</div>
 		</section>
 
@@ -227,7 +223,7 @@
 	<footer>
 		<div class="container">
 			<ul class="footer__menu">
-				<a href="About.html">Despre noi</a>
+				<a asp-area ="" asp-controller="ContactsPage" asp-action="ContactPage" class="text-decoration-none"> About and Contact </a>
 			</ul>
 		</div>
 	</footer>

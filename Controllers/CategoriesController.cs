@@ -9,9 +9,13 @@ using JewelryStore.Context;
 using JewelryStore.Models;
 using JewelryStore.Services.Interfaces;
 using System.Numerics;
+using Microsoft.AspNetCore.Authorization.Infrastructure;
+using Microsoft.AspNetCore.Authorization;
+using System.Data;
 
 namespace JewelryStore.Controllers
 {
+    [Authorize(Roles = "ADMIN")]
     public class CategoriesController : Controller
     {
         private readonly ICategoryService _categoryService;
